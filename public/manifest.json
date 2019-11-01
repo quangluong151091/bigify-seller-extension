@@ -1,0 +1,31 @@
+{
+  "name": "Send image from Amazon to Trello",
+  "version": "2.0",
+  "description": "Get link image then send to Trello board",
+  "manifest_version": 2,
+  "icons": {
+    "16": "logo.png",
+    "32": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.com/*"],
+      "all_frames": true,
+      "js": ["assets/js/contentScript.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["assets/js/backgroundScript.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Send image from Amazon to Trello"
+  },
+  "content_security_policy": "script-src 'self' 'sha256-HQ6cBC/dRNNQkaUFzs23O6wBEAIxD27lSt1IS/tvhJs='; object-src 'self'"
+}

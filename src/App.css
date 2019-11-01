@@ -1,0 +1,32 @@
+body{
+    width:350px;
+    height:350px;
+   overflow-wrap: break-word;
+}
+
+.App {
+    margin: 10px;
+}
+
+.font-size-10 {
+    font-size: 10pt;
+}
+
+.magic-block-callout {
+    border-left: 4px solid #f00;
+    padding: 5px 5px 1px 10px;
+    position: relative;
+}
+
+.magic-block-callout.type-warning {
+    background-color: #fcf8f2;
+    border-color: #f0ad4e;
+}
+
+.magic-block-callout.type-warning h6 {
+    color: #f0ad4e;
+}
+
+.magic-block-callout .callout-body {
+    font-size: 8pt;
+}
